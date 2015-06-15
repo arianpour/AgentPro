@@ -32,4 +32,30 @@ class User extends Model implements AuthenticatableContract, CanResetPasswordCon
      * @var array
      */
     protected $hidden = ['password', 'remember_token'];
+
+
+    /**
+     * Get the Client record associated with the user.
+     */
+    public function client()
+    {
+        return $this->hasMany('App\Client');
+    }
+
+    /**
+     * Get the owners record associated with the user.
+     */
+    public function owner()
+    {
+        return $this->hasMany('App\Owner');
+    }
+
+
+    /**
+     * Get the RentalAgreements record associated with the user.
+     */
+    public function RentalAgreement()
+    {
+        return $this->hasMany('App\RentalAgreement');
+    }
 }

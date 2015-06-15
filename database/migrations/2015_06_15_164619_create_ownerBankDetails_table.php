@@ -16,6 +16,7 @@ class CreateOwnerBankDetailsTable extends Migration
             $table->increments('id');
             $table->string('bankName');
             $table->string('accountNo');
+            $table->integer('owner_id');
             $table->timestamps();
         });
     }

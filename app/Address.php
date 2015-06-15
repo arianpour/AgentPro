@@ -14,4 +14,13 @@ class Address extends Model
 
     protected $fillable = ['unit', 'street', 'postCode','city','state','country'];
 
+
+    /**
+     * Get all of the owning addressable models.
+     */
+    public function addressable()
+    {
+        return $this->morphTo();
+    }
+
 }

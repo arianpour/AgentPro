@@ -17,4 +17,12 @@ class RentalAgreement extends Model
                             ,'rentalAmount','rentalDeposit','utilitiesDeposit'
                             ,'otherDeposit','premiseUse'];
 
+    /**
+     * Get the user that owns the RentalAgreement.
+     */
+    public function user()
+    {
+        return $this->belongsTo('App\User');
+    }
+
 }

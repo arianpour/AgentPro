@@ -14,4 +14,12 @@ class OwnerBankDetail extends Model
 
     protected $fillable = ['bankName','accountNo'];
 
+    /**
+     * Get the Owner that owns the OwnerBankDetail.
+     */
+    public function owner()
+    {
+        return $this->belongsTo('App\Owner');
+    }
+
 }

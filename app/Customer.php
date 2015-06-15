@@ -15,4 +15,14 @@ class Customer extends Model
 
     protected $fillable = ['firstName','lastName','email','phoneNo'];
 
+
+    /**
+     * Get all of the owning customerable models.
+     */
+    public function customerable()
+    {
+        return $this->morphTo();
+    }
+
+
 }
